@@ -12,8 +12,8 @@ class CustomUserAdmin(UserAdmin):
         "avatar",
 
     ]
-    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("is_premium","follower_count","following_count",)}),)
-    add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("is_premium","follower_count","following_count",)}),)
+    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("is_premium","avatar")}),)
+    add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("is_premium","avatar",)}),)
 
 
 admin.site.register(User, CustomUserAdmin)
