@@ -3,10 +3,8 @@ from django.db import models
 # Create your models here.
 class Tweet(models.Model):
     user = models.ForeignKey("accounts.User", on_delete=models.CASCADE)
-    content = models.CharField(max_length=100)
-    coment_of = models.OneToOneField(self, on_delete=models.CASCADE)
-    likes_count = models.IntegerField(default=0)
-    comments_count = models.IntegerField(default=0)
+    content = models.CharField(max_length=100, blank=True)
+    created = models.DateTimeField(auto_now_add=True, null=True)
 
 
 class Like(models.Model):
