@@ -6,7 +6,7 @@ from tweets.models import Tweet, Like
 class TweetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tweet
-        fields = ("id","user", "content", "created", "coment")
+        fields = ("id","user", "content", "created", "comment")
 
 class LikeSerializer(serializers.ModelSerializer):
     class Meta:
