@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from .views import TwitterList, TweetCreation, TweetRetriveDestroyUpdate, LikeList, LikeCreation, LikeUpdateRetriveDelete
 
 urlpatterns = [
@@ -8,4 +8,5 @@ urlpatterns = [
     path("like-list/", LikeList.as_view(), name="like_list"),
     path("like-create/", LikeCreation.as_view(), name="like_create"),
     path("like-retrive-update-delete/<int:pk>/", LikeUpdateRetriveDelete.as_view(), name="like_up_del_re"),
+    
 ]

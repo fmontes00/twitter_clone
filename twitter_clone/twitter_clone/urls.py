@@ -21,4 +21,5 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("tweets/", include("tweets.urls")),
     path("api/", include("api.urls")),
+    path("api-auth/", include("rest_framework.urls")), 
 ]
